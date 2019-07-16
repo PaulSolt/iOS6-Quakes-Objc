@@ -16,7 +16,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    
+//    NSString *place, address;
+    
+//    double *number1, number2;
+    
+    // double *number1;
+    // double number2;
+    
+    // Primative Data Types
+    double pi = 3.14;
+    int age = 33;
+    long int numberOfSeconds = 300000000;
+    char letter = 'a';
+    
+    // Object Types (pointer types)
+    // We're storing the address to another location in memory
+    
+    NSString *name = @"Paul";
+    NSNumber *number = @3.14;
+    NSNumber *number2 = @47;
+    
+    // c string (c-string) c programming language
+    char *lastName = "Solt";
+    
+    
 }
 
 
