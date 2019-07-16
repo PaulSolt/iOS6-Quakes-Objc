@@ -10,9 +10,41 @@
 
 @implementation LSIQuakeFetcher
 
+static NSString *baseURLString = @"https://earthquake.usgs.gov/fdsnws/event/1/query";
 
 - (void)fetchQuakesFromDateInterval:(NSDateInterval *)dateInterval
                   completitionBlock:(LSIQuakeFetcherCompletionBlock)completionBlock {
+    
+    // Create API request
+    
+    // Setup the URL
+    NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:urlComponents resolvingAgainstBaseURL:YES];
+    
+    // Query Parameters
+    NSISO8601DateFormatter *formatter = [[NSISO8601DateFormatter alloc] init];
+    NSString *startTimeString = [formatter stringFromDate:dateInterval.startDate];
+    NSString *endTimeString = [formatter stringFromDate:dateInterval.endDate];
+    
+    NSArray *queryItems = @[
+                            [NSURLQueryItem queryItemWithName:@"format" value:@"geojson"],
+                            [NSURLQueryItem queryItemWithName:@"starttime" value:startTimeString],
+                            [NSURLQueryItem queryItemWithName:@"endtime" value:endTimeString],
+                            ];
+    
+    urlComponents.queryItems = queryItems;
+    
+    NSURL *url = urlComponents.URL;
+    NSLog(@"URL: %@", url);
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"Made a request");
+        
+    }];
+    [task resume];
+    
+    // Handle the responses (error vs. data)
+    
+    // Call the completion block
     
 }
 
