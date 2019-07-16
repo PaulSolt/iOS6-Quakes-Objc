@@ -40,6 +40,11 @@
     return self;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"Place: %@\nMag: %f\nDate: %@", self.place, self.magnitude, self.time];
+}
+
 
 
 

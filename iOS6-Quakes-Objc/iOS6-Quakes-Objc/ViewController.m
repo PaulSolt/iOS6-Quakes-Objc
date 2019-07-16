@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LSIQuakeFetcher.h"
+#import "LSIQuake.h"
 
 @interface ViewController ()
 
@@ -55,7 +56,13 @@
     LSIQuakeFetcher *quakeFetcher = [[LSIQuakeFetcher alloc] init];
     
     [quakeFetcher fetchQuakesWithCompletionBlock:^(NSArray * _Nonnull quakes, NSError * _Nonnull error) {
+        NSLog(@"Count: %lu", quakes.count);
         
+//        NSLog(@"Quakes: %@", quakes);
+        
+        for (LSIQuake *quake in quakes) {
+            NSLog(@"%@", quake);
+        }
     }];
     
     

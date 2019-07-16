@@ -7,6 +7,7 @@
 //
 
 #import "LSIQuakeFetcher.h"
+#import "LSIQuake.h"
 
 @implementation LSIQuakeFetcher
 
@@ -39,14 +40,47 @@ static NSString *baseURLString = @"https://earthquake.usgs.gov/fdsnws/event/1/qu
     NSLog(@"URL: %@", url);
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSLog(@"Made a request");
+        
+        // Handle the responses (error vs. data)
+
+        // Call the completion block as needed
+        // check the errors
+        
+        if (error) {
+            NSLog(@"Error fetching quakes: %@", error);
+            completionBlock(nil, error);
+            return;
+        }
+        
+        // parse the data
+        NSError *jsonError = nil;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        if (jsonError) {
+            NSLog(@"JSON Error: %@", jsonError);
+            completionBlock(nil, jsonError);
+            return;
+        }
+        
+        // Parse the data
+        
+        //NSLog(@"JSON: %@", json);
+        NSArray *earthquakeArray = json[@"features"];   // array of Dictionary objects
+        
+        NSMutableArray *quakes = [[NSMutableArray alloc] init];
+        for (NSDictionary *dict in earthquakeArray) {
+            LSIQuake *quake = [[LSIQuake alloc] initWithDictionary:dict];
+            
+            if (quake) {
+                // quakes.append()
+                [quakes addObject:quake];
+            }
+        }
+        completionBlock(quakes, nil);
         
     }];
     [task resume];
     
-    // Handle the responses (error vs. data)
     
-    // Call the completion block
     
 }
 
