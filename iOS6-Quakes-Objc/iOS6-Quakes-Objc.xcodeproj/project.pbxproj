@@ -14,6 +14,7 @@
 		BD3398B322DE2EB700323F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3398B122DE2EB700323F6C /* LaunchScreen.storyboard */; };
 		BD3398B622DE2EB700323F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3398B522DE2EB700323F6C /* main.m */; };
 		BD3398BE22DE302400323F6C /* LSIQuake.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3398BD22DE302400323F6C /* LSIQuake.m */; };
+		BD3398C122DE423700323F6C /* LSIQuakeFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3398C022DE423700323F6C /* LSIQuakeFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		BD3398B522DE2EB700323F6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD3398BC22DE302400323F6C /* LSIQuake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIQuake.h; sourceTree = "<group>"; };
 		BD3398BD22DE302400323F6C /* LSIQuake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIQuake.m; sourceTree = "<group>"; };
+		BD3398BF22DE423700323F6C /* LSIQuakeFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIQuakeFetcher.h; sourceTree = "<group>"; };
+		BD3398C022DE423700323F6C /* LSIQuakeFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIQuakeFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				BD3398AA22DE2EB700323F6C /* ViewController.m */,
 				BD3398BC22DE302400323F6C /* LSIQuake.h */,
 				BD3398BD22DE302400323F6C /* LSIQuake.m */,
+				BD3398BF22DE423700323F6C /* LSIQuakeFetcher.h */,
+				BD3398C022DE423700323F6C /* LSIQuakeFetcher.m */,
 				BD3398AC22DE2EB700323F6C /* Main.storyboard */,
 				BD3398AF22DE2EB700323F6C /* Assets.xcassets */,
 				BD3398B122DE2EB700323F6C /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 				BD3398BE22DE302400323F6C /* LSIQuake.m in Sources */,
 				BD3398AB22DE2EB700323F6C /* ViewController.m in Sources */,
 				BD3398B622DE2EB700323F6C /* main.m in Sources */,
+				BD3398C122DE423700323F6C /* LSIQuakeFetcher.m in Sources */,
 				BD3398A822DE2EB700323F6C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

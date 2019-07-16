@@ -24,6 +24,7 @@
 //        _magnitude = [properties[@"mag"] doubleValue];
         
         _magnitude = [dictionary[@"properties"][@"mag"] doubleValue];
+        _place = dictionary[@"properties"][@"place"];
         
         long timeInMilliseconds = [dictionary[@"properties"][@"time"] longValue];
         NSTimeInterval timeInSeconds = (NSTimeInterval)timeInMilliseconds / 1000.0;
