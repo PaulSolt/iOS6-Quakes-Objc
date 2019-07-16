@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LSIQuakeFetcher.h"
 
 @interface ViewController ()
 
@@ -49,6 +50,14 @@
     double result3 = 4500.0 / (NSTimeInterval)1000;
     
     NSLog(@"result: %d result2: %f result3: %f", result, result2, result3);
+    
+    
+    LSIQuakeFetcher *quakeFetcher = [[LSIQuakeFetcher alloc] init];
+    
+    [quakeFetcher fetchQuakesWithCompletionBlock:^(NSArray * _Nonnull quakes, NSError * _Nonnull error) {
+        
+    }];
+    
     
 }
 
