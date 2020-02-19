@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LSIQuakeFetcher.h"
 #import "LSIQuake.h"
+#import "LSILog.h"
 
 @interface ViewController ()
 
@@ -18,11 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     
-//    NSString *place, address;
     
-//    double *number1, number2;
+    //    NSString *place, address;
+    
+    //    double *number1, number2;
     
     // double *number1;
     // double number2;
@@ -46,7 +47,7 @@
     int result = 4500 / 1000;  // 4.5 -> truncate the decimal -> 4
     double result2 = 4500 / 1000; // 4.0 because of integer division
     
-  // Casting: (Type)name
+    // Casting: (Type)name
     // Swift: Double(3)
     double result3 = 4500.0 / (NSTimeInterval)1000;
     
@@ -58,15 +59,14 @@
     [quakeFetcher fetchQuakesWithCompletionBlock:^(NSArray * _Nonnull quakes, NSError * _Nonnull error) {
         NSLog(@"Count: %lu", quakes.count);
         
-//        NSLog(@"Quakes: %@", quakes);
+        //        NSLog(@"Quakes: %@", quakes);
         
         for (LSIQuake *quake in quakes) {
             NSLog(@"%@", quake);
         }
     }];
     
-    
+    NSLog(@"Dogs are great: %@", @"ROW");
 }
-
-
-@end
+     
+     @end

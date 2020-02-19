@@ -32,6 +32,7 @@
 		BD3398BD22DE302400323F6C /* LSIQuake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIQuake.m; sourceTree = "<group>"; };
 		BD3398BF22DE423700323F6C /* LSIQuakeFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIQuakeFetcher.h; sourceTree = "<group>"; };
 		BD3398C022DE423700323F6C /* LSIQuakeFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIQuakeFetcher.m; sourceTree = "<group>"; };
+		BD3398C322DF6AD200323F6C /* LSILog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 				BD3398BD22DE302400323F6C /* LSIQuake.m */,
 				BD3398BF22DE423700323F6C /* LSIQuakeFetcher.h */,
 				BD3398C022DE423700323F6C /* LSIQuakeFetcher.m */,
+				BD3398C322DF6AD200323F6C /* LSILog.h */,
 				BD3398AC22DE2EB700323F6C /* Main.storyboard */,
 				BD3398AF22DE2EB700323F6C /* Assets.xcassets */,
 				BD3398B122DE2EB700323F6C /* LaunchScreen.storyboard */,
@@ -300,6 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "iOS6-Quakes-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -317,6 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "iOS6-Quakes-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

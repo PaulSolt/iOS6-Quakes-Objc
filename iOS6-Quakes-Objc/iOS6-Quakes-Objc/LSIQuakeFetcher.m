@@ -19,8 +19,6 @@ static NSString *baseURLString = @"https://earthquake.usgs.gov/fdsnws/event/1/qu
     // Create API request
     
     // Setup the URL
-    
-    
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
     
     // Query Parameters
